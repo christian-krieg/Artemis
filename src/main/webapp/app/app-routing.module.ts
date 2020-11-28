@@ -69,6 +69,9 @@ const LAYOUT_ROUTES: Routes = [navbarRoute, ...errorRoute];
                 {
                     path: 'course-management/:courseId/exams',
                     loadChildren: () => import('./exam/manage/exam-management.module').then((m) => m.ArtemisExamManagementModule),
+                    data: {
+                        usePathForBreadcrumbs: true,
+                    },
                 },
                 {
                     path: 'features',
