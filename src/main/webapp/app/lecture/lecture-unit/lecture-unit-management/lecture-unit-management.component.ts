@@ -26,7 +26,6 @@ export class LectureUnitManagementComponent implements OnInit, OnDestroy {
     updateOrderSubject: Subject<any>;
     updateOrderSubjectSubscription: Subscription;
     navigationEndSubscription: Subscription;
-    isVisible: boolean;
 
     readonly LectureUnitType = LectureUnitType;
     readonly ActionType = ActionType;
@@ -49,9 +48,7 @@ export class LectureUnitManagementComponent implements OnInit, OnDestroy {
         this.navigationEndSubscription.unsubscribe();
     }
     ngOnInit(): void {
-        this.isVisible = this.activatedRoute.children.length === 0;
         this.navigationEndSubscription = this.router.events.pipe(filter((value) => value instanceof NavigationEnd)).subscribe(() => {
-            this.isVisible = this.activatedRoute.children.length === 0;
             this.loadData();
         });
 

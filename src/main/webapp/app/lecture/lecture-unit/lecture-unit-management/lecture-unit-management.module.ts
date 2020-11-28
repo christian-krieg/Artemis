@@ -29,7 +29,6 @@ const ENTITY_STATES = [...lectureUnitRoute];
         ArtemisSharedModule,
         ReactiveFormsModule,
         ArtemisSharedComponentModule,
-        RouterModule,
         RouterModule.forChild(ENTITY_STATES),
         ArtemisCoursesModule,
         FormDateTimePickerModule,
