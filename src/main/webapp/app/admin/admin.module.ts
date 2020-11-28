@@ -27,6 +27,7 @@ const ENTITY_STATES = [...adminState];
 
 @NgModule({
     imports: [
+        RouterModule,
         RouterModule.forChild(ENTITY_STATES),
         ArtemisSharedModule,
         FormDateTimePickerModule,

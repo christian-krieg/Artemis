@@ -43,6 +43,7 @@ import { ArtemisSharedPipesModule } from 'app/shared/pipes/shared-pipes.module';
 @NgModule({
     imports: [
         ArtemisSharedModule,
+        RouterModule,
         RouterModule.forChild(courseManagementState),
         FormDateTimePickerModule,
         ReactiveFormsModule,
