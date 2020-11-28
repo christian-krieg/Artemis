@@ -30,7 +30,7 @@ describe('RatingListComponent', () => {
             providers: [
                 {
                     provide: ActivatedRoute,
-                    useValue: new MockActivatedRoute({ courseId: 123 }),
+                    useValue: new MockActivatedRoute({ parent: { courseId: 123 } }),
                 },
                 DifferencePipe,
                 {

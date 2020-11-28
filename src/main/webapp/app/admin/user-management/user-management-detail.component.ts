@@ -21,7 +21,7 @@ export class UserManagementDetailComponent implements OnInit {
         this.route.data.subscribe(({ user }) => {
             this.user = user.body ? user.body : user;
         });
-        this.isVisible = this.route.children.length === 0;
+        this.isVisible = !this.route.children || this.route.children.length === 0;
         this.router.events.pipe(filter((event) => event instanceof NavigationEnd)).subscribe(() => (this.isVisible = this.route.children.length === 0));
     }
 }
